@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="box">
+
+        <p>{{ message }}</p> 
+
+        Your Name : <input type="text" v-model="users_name">
+
+        <!-- If - else -->
+        <p v-if="count == 0">No replies yet {{count}}</p>
+
+        <p v-else-if="count > 2">You are very popular</p>
+
+        <p v-else>Number of clicks {{count}}</p>
+
+        <!-- EVENT LISTENER -->
+        <button v-on:click="sayHI">Increment</button>
+        <button v-on:click="decrease">Decrement</button>
+
+        <!-- Loop  -->
+         <ul>
+            <li v-for="name in users">{{ name }}</li>
+         </ul>
+
+    </div>
+
+</body>
+<script src="application2.js"></script>
+</html>

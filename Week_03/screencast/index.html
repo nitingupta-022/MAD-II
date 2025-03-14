@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 2 App</title>
+    <!-- Include Vue 2 from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <!-- Vue App Root Element -->
+    <div id="app">
+
+        <p> {{ message }}</p>
+
+        Your Name : <input type="text" v-model="visitor_name" >
+
+        <!-- If-else in Vue -->
+        <p v-if="count == 0"> No replies yet </p>
+
+        <p v-else-if="count > 2"> You are very popular </p>
+        
+        <p v-else> Number of replies {{ count }}</p>
+        
+        <button v-on:click="sayHI" >Say hi</button>
+
+        <!-- Loop in Vue -->
+         <ul>
+            <li v-for="name in visitors" >{{ name }}</li>
+         </ul>
+    </div>
+
+    <!-- Link to JavaScript File -->
+    <script src="application.js"></script>
+
+</body>
+</html>
