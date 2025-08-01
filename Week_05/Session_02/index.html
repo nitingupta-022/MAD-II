@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Fetch</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> 
+</head>
+<body>
+    <div id="app">
+
+        <!-- for method1() -->
+         
+         <h2>User Table</h2>
+         <table v-if="users">
+            <thead>
+                <tr>
+                    <th>Name : </th>
+                    <th>Username : </th>
+                    <th>Phone : </th>
+                    <th>Email : </th>
+                    <th>Website : </th>
+                    <th>Action : </th>
+                </tr>
+            </thead>
+            <tbody v-for="user in users">
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.website}}</td>
+                    <td>
+                        <!-- Here method2 trigerrs -->
+                        <button @click="method2(user.id)">See Details</button>
+                    </td>
+                </tr>
+            </tbody>
+         </table>
+         <h2 v-else>Users not found</h2>
+
+         <div v-if="user">
+            <h2>Details for {{user.name}}</h2>
+            <h3>Address</h3>
+            <h4>Suite: {{ user.address.suite }}</h4>
+            <h4>Street: {{ user.address.street }} </h4>
+            <h4>City: {{ user.address.city }}</h4>
+            <h4>Zip Code: {{ user.address.zipcode}}</h4>
+            <h3>Company</h3>
+            <h4>{{user.company.name}}</h4>
+            <h5>{{user.company.catchPhrase}}</h5>
+            <!-- Here method3 trigerrs -->
+            <button @click="method3">Close</button>
+         </div>
+
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

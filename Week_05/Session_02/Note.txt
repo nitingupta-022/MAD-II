@@ -1,0 +1,8 @@
+link : https://www.youtube.com/watch?v=C4E5h-742J0
+
+1) Fetch on a Simple Static URL 
+    - To demonstrate this we use method1 in script.js
+    - In JSON we have to manage it by using two then 
+    - Whenever we make a fetch request, we will mostly be using two then and one catch. Because in the first, then we are converting into res.JSON it is not the response, that is promise. And that another promise has to be resolved using then
+
+2) Fetch on a Dynamic URL 
