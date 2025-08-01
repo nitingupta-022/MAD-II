@@ -1,0 +1,22 @@
+slot : Tells you where the content goes. 
+props : Tells you where the attribute goes. 
+
+In index.html we created two components 
+-> First component with attributes and content
+-> Second component with attributes and no content. 
+
+Every template can have its own data properties, methods, computed properties. 
+
+The useage of props and data properties in component or in the template is exactly same.
+
+How do you provide data from parent element to child element ? 
+-> using props
+
+If we have to send data from parent to child -> using props 
+But if we have to send data from child to parent -> using $emit
+
+components can be siblings, no data transfer among themselves. 
+
+If i created data property in the component it stays with the component. 
+If you want to create a data property in the main application it stays with the main application.
+
